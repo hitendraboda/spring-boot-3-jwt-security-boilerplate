@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: spring-boot-3-jwt-security-boilerplate
+  datasource:
+    url: jdbc:postgresql://localhost:5432/jwt_security_db
+    username: username
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show_sql: true
+    format-sql: true
+  main:
+    allow-circular-references: true
+  flyway:
+    enabled: true
+    baselineOnMigrate: true
+boda:
+  app:
+    jwtSecret: ==== Your Secret Key=======
+    jwtExpirationMs: 86400000
+management:
+  security:
+    enabled: false
